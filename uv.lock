@@ -588,10 +588,18 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "dspy-ai" },
+    { name = "openai" },
+    { name = "pydantic" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "dspy-ai", specifier = ">=2.5.20" }]
+requires-dist = [
+    { name = "dspy-ai", specifier = ">=2.5.20" },
+    { name = "openai", specifier = ">=1.53.0" },
+    { name = "pydantic", specifier = ">=2.9.2" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
+]
 
 [[package]]
 name = "magicattr"
