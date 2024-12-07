@@ -17,6 +17,7 @@ class Step(BaseModel):
     explanation: str
     output: str
 
+
 class MathReasoning(BaseModel):
     steps: list[Step]
     final_answer: str
@@ -26,7 +27,10 @@ def math_reasoning(question: str) -> MathReasoning:
     response = client.beta.chat.completions.parse(
         model="gpt-4o-2024-08-06",
         messages=[
-            {"role": "system", "content": "You are a helpful math tutor. Guide the user through the solution step by step."},
+            {
+                "role": "system",
+                "content": "You are a helpful math tutor. Guide the user through the solution step by step.",
+            },
             {"role": "user", "content": question},
         ],
         response_format=MathReasoning,

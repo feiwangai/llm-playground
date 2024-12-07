@@ -5,8 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "argilla>=2.5.0",
     "dspy-ai>=2.5.20",
     "openai>=1.53.0",
     "pydantic>=2.9.2",
     "python-dotenv>=1.0.1",
+    "ruff>=0.8.2",
 ]

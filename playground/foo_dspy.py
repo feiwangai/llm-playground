@@ -1,7 +1,6 @@
 import dspy
 
 
-
 def explore_fun1():
     lm = dspy.LM("openai/gpt-4o")
     dspy.configure(lm=lm)
@@ -13,7 +12,7 @@ def explore_fun1():
 def explore_fun2():
     lm = dspy.LM("openai/gpt-4o")
     dspy.configure(lm=lm)
-    cot = dspy.ChainOfThought('question -> response')
+    cot = dspy.ChainOfThought("question -> response")
     print(cot(question="should curly braces appear on their own line?").response)
     print(dspy.inspect_history(n=1))
 
